@@ -1,1 +1,3 @@
-- Do the DVD sleep mode
+- [ ] Make venv
+- [ ] Update reader
+- [ ] Update readme (activate SPI1)
