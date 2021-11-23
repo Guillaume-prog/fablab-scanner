@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fablab</title>
+
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div id="main">
+        <img src="/static/campusfab.png" alt="CampusFab" id="cover-img">
+
+        <form action="">
+            <input type="text" name="person-name" placeholder="Nom / Prénom">
+            <input type="email" name="person-email" placeholder="Adresse mail">
+
+            <label class="select-wrapper">
+                <select name="person-type" id="">
+                    <option value="student">Etudiant</option>
+                    <option value="teacher">Enseignant</option>
+                    <option value="other">Autre</option>
+                </select>
+            </label>
+
+
+            <label id="adherant">
+                <span>Adhérant au fablab</span>
+                <input type="checkbox" name="person-subscribed" id="">
+                <div class="checkbox"></div>
+            </label>
+
+            <input type="submit" value="Submit">
+        </form>
+
+        <p id="disclosure">En remplissant ce formulaire, vous acceptez que votre adresse mail sera stockée. <a>En savoir plus</a></p>
+    </div>
+</body>
+</html>
