@@ -1,12 +1,13 @@
 from tinydb import TinyDB, Query
 import os.path as path
-from datetime import datetime
+import time
 
 class DB:
 
     def __init__(self, tables_dir):
-        self.entry_db = TinyDB(path.join(tables_dir, "entries.json"))
-        self.user_db = TinyDB(path.join(tables_dir, "users.json"))
+        self.db = TinyDB(path.join(tables_dir, "data.json"))
+        self.entry_db = self.db.table("entries")
+        self.user_db = self.db.table("users")
 
     def user_registered(self, uid):
         User = Query()
@@ -21,20 +22,22 @@ class DB:
             'status': status
         })
 
-    def add_visit_entry(self, uid):
+    def add_user_entry(self, uid):
         User = Query()
         res = self.user_db.search(User.uid == uid)
+
+        print(res)
 
         if len(res) == 0:
             return
         
         user = res[0]
-        self.add_visit_entry(user.uid, user.name, user.mail, user.status)
+        self.add_visit_entry(uid, user['name'], user['mail'], user['status'])
         
 
     def add_visit_entry(self, uid, name, mail, status):
         self.entry_db.insert({
-            'timestamp': datetime.today(),
+            'timestamp': time.time(),
             'uid': uid,
             'name': name,
             'mail': mail,

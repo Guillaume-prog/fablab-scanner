@@ -18,16 +18,18 @@ def main():
         if not db.user_registered(uid):
             screen.display_code(uid)
 
-            wants_to_register, name, mail, status = site.wait_for_register()
+            payload = site.wait_for_register()
 
-            if(wants_to_register):
-                db.register_user(uid, name, mail, status)
-            
-            db.add_visit_entry(uid, name, mail, status)
+            if not payload == None:
+                wants_to_register, name, mail, status = payload
+
+                if(wants_to_register):
+                    db.register_user(uid, name, mail, status)
+                
+                db.add_visit_entry(uid, name, mail, status)
         else:
-            db.add_visit_entry(uid)
-
-        screen.display_message("Bienvenue !", 5)
+            db.add_user_entry(uid)
+            screen.display_message("Bienvenue !", 5)
 
 
 if __name__ == "__main__":

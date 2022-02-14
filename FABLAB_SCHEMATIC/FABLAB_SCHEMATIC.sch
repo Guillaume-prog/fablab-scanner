@@ -1,0 +1,246 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Connector_Generic:Conn_01x08 J3
+U 1 1 619FCA4E
+P 5800 3850
+F 0 "J3" H 5880 3842 50  0000 L CNN
+F 1 "RFID-RC522" H 5880 3751 50  0000 L CNN
+F 2 "" H 5800 3850 50  0001 C CNN
+F 3 "~" H 5800 3850 50  0001 C CNN
+	1    5800 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x08 J2
+U 1 1 619FD259
+P 5800 2550
+F 0 "J2" H 5880 2542 50  0000 L CNN
+F 1 "TFT-screen" H 5880 2451 50  0000 L CNN
+F 2 "" H 5800 2550 50  0001 C CNN
+F 3 "~" H 5800 2550 50  0001 C CNN
+	1    5800 2550
+	1    0    0    -1  
+$EndComp
+Text Label 2850 3150 2    50   ~ 0
+SPI_MOSI
+Text Label 2850 3250 2    50   ~ 0
+SPI_MISO
+Text Label 2850 3350 2    50   ~ 0
+SPI_SCK
+Wire Wire Line
+	2850 3350 2900 3350
+Wire Wire Line
+	2850 3250 2900 3250
+Wire Wire Line
+	2850 3150 2900 3150
+Text Label 5600 4250 2    50   ~ 0
+3.3V
+Text Label 5600 4150 2    50   ~ 0
+RST
+Text Label 5600 4050 2    50   ~ 0
+GND
+Text Label 5600 3950 2    50   ~ 0
+IRQ
+Text Label 5600 3850 2    50   ~ 0
+MISO
+Text Label 5600 3750 2    50   ~ 0
+MOSI
+Text Label 5600 3650 2    50   ~ 0
+SCK
+Text Label 5600 3550 2    50   ~ 0
+SDA
+Text Label 2900 2250 2    50   ~ 0
+3.3V
+Text Label 5600 2250 2    50   ~ 0
+VCC
+Text Label 5600 2350 2    50   ~ 0
+GND
+Text Label 5600 2450 2    50   ~ 0
+CS
+Text Label 5600 2550 2    50   ~ 0
+RESET
+Text Label 5600 2650 2    50   ~ 0
+A0
+Text Label 5600 2750 2    50   ~ 0
+SDA
+Text Label 5600 2850 2    50   ~ 0
+SCK
+Text Label 5600 2950 2    50   ~ 0
+LED
+Text Label 3400 2450 0    50   ~ 0
+GND
+Text Label 3450 3350 0    50   ~ 0
+SPI_SS0
+Wire Wire Line
+	2900 2250 2650 2250
+Wire Wire Line
+	2650 2250 2650 2150
+$Comp
+L power:+3.3V #PWR01
+U 1 1 61A39A6C
+P 2650 2150
+F 0 "#PWR01" H 2650 2000 50  0001 C CNN
+F 1 "+3.3V" H 2665 2323 50  0000 C CNN
+F 2 "" H 2650 2150 50  0001 C CNN
+F 3 "" H 2650 2150 50  0001 C CNN
+	1    2650 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR07
+U 1 1 61A3A584
+P 5400 4250
+F 0 "#PWR07" H 5400 4100 50  0001 C CNN
+F 1 "+3.3V" V 5400 4500 50  0000 C CNN
+F 2 "" H 5400 4250 50  0001 C CNN
+F 3 "" H 5400 4250 50  0001 C CNN
+	1    5400 4250
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5600 2950 5400 2950
+$Comp
+L power:+3.3V #PWR05
+U 1 1 61A3B0EF
+P 5400 2950
+F 0 "#PWR05" H 5400 2800 50  0001 C CNN
+F 1 "+3.3V" V 5400 3200 50  0000 C CNN
+F 2 "" H 5400 2950 50  0001 C CNN
+F 3 "" H 5400 2950 50  0001 C CNN
+	1    5400 2950
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR04
+U 1 1 61A3BF11
+P 5400 2350
+F 0 "#PWR04" H 5400 2100 50  0001 C CNN
+F 1 "GND" V 5400 2150 50  0000 C CNN
+F 2 "" H 5400 2350 50  0001 C CNN
+F 3 "" H 5400 2350 50  0001 C CNN
+	1    5400 2350
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR02
+U 1 1 61A3C228
+P 3700 2450
+F 0 "#PWR02" H 3700 2200 50  0001 C CNN
+F 1 "GND" H 3800 2450 50  0000 C CNN
+F 2 "" H 3700 2450 50  0001 C CNN
+F 3 "" H 3700 2450 50  0001 C CNN
+	1    3700 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR06
+U 1 1 61A3C673
+P 5400 4050
+F 0 "#PWR06" H 5400 3800 50  0001 C CNN
+F 1 "GND" V 5400 3850 50  0000 C CNN
+F 2 "" H 5400 4050 50  0001 C CNN
+F 3 "" H 5400 4050 50  0001 C CNN
+	1    5400 4050
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3700 2450 3400 2450
+Text Label 4700 2550 0    50   ~ 0
+RESET
+Text Label 4700 2650 0    50   ~ 0
+D\C
+Wire Wire Line
+	3450 3350 3400 3350
+Wire Wire Line
+	3400 3250 3450 3250
+Text Label 3450 3250 0    50   ~ 0
+RESET
+Text Label 4700 3750 0    50   ~ 0
+SPI_MOSI
+Text Label 4700 3850 0    50   ~ 0
+SPI_MISO
+Text Label 4700 4150 0    50   ~ 0
+RESET
+Text Label 4700 3650 0    50   ~ 0
+SPI_SCK
+Text Label 4700 2850 0    50   ~ 0
+SPI_SCK
+Text Label 4700 2750 0    50   ~ 0
+SPI_MOSI
+Text Label 4700 2450 0    50   ~ 0
+SPI_SS0
+Text Label 4700 3550 0    50   ~ 0
+SPI_SS1
+$Comp
+L Connector_Generic:Conn_02x20_Odd_Even J1
+U 1 1 61A126F3
+P 3100 3150
+F 0 "J1" H 2650 2000 50  0000 C CNN
+F 1 "Raspberry Pi connector" H 3200 2000 50  0000 C CNN
+F 2 "" H 3100 3150 50  0001 C CNN
+F 3 "~" H 3100 3150 50  0001 C CNN
+	1    3100 3150
+	1    0    0    -1  
+$EndComp
+Text Label 3450 3050 0    50   ~ 0
+D\C
+Wire Wire Line
+	3450 3050 3400 3050
+Wire Wire Line
+	5400 4050 5600 4050
+Wire Wire Line
+	5400 4250 5600 4250
+Wire Wire Line
+	4700 4150 5600 4150
+Wire Wire Line
+	4700 3850 5600 3850
+Wire Wire Line
+	4700 3750 5600 3750
+Wire Wire Line
+	4700 3650 5600 3650
+Wire Wire Line
+	4700 3550 5600 3550
+Wire Wire Line
+	5400 2350 5600 2350
+Wire Wire Line
+	5600 2250 5400 2250
+$Comp
+L power:+3.3V #PWR03
+U 1 1 61A38C60
+P 5400 2250
+F 0 "#PWR03" H 5400 2100 50  0001 C CNN
+F 1 "+3.3V" V 5400 2500 50  0000 C CNN
+F 2 "" H 5400 2250 50  0001 C CNN
+F 3 "" H 5400 2250 50  0001 C CNN
+	1    5400 2250
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4700 2450 5600 2450
+Wire Wire Line
+	4700 2550 5600 2550
+Wire Wire Line
+	4700 2650 5600 2650
+Wire Wire Line
+	4700 2750 5600 2750
+Wire Wire Line
+	4700 2850 5600 2850
+Wire Wire Line
+	3400 3450 3450 3450
+Text Label 3450 3450 0    50   ~ 0
+SPI_SS1
+$EndSCHEMATC
